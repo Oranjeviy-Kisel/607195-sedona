@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Оставить отзыв</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item"><a href="index.html">Главная</a></li>
+          <li class="main-nav__list-item"><a href="photo.html">Фото и видео</a></li>
+          <li class="main-nav__list-item"><a href="form.html">Форма отзыва</a></li>
+          <li class="main-nav__list-item"><a>HTML-Academy</a></li>
+        </ul>
+        <button class="main-nav__list__closer">Close</button>
+        <a class="main-nav__brand" href="index.html">
+          <img src="http://placehold.it/150x100" width="150" height="100" alt="City of Sedona">
+        </a>
+        <button class="main-nav__list__hamburger">Menu collapse</button>
+      </nav>
+
+      <div class="page-header__picture">
+        <h1 class="page-header__title">Sedona</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2 class="intro__header">Оставьте свой отзыв</h2>
+        <p class="intro__info">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </section>
+
+      <form class="reply" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="reply__block">
+          <legend class="reply__block__name">Представьтесь</legend>
+          <label class="reply__block__label" for="username">Имя</label>
+          <input class="reply__block__input--text" type="text" name="username" placeholder="Петр" required>
+
+          <label class="reply__block__label" for="usersurname">Фамилия</label>
+          <input class="reply__block__input--text" type="text" name="usersurname" placeholder="Иванов" required>
+
+          <label class="reply__block__label" for="userpatronymic">Отчество</label>
+          <input class="reply__block__input--text" type="text" name="userpatronymic" placeholder="Александрович">
+        </fieldset>
+
+        <fieldset class="reply__block">
+          <legend class="reply__block__name">Контактная информация</legend>
+          <label class="reply__block__label" for="userphone">Контактный телефон*:</label>
+          <input class="reply__block__input--text" type="text" name="userphone" placeholder="Введите телефон" required>
+
+          <label class="reply__block__label" for="usermail">Электронная почта*</label>
+          <input class="reply__block__input--text" type="text" name="usermail" placeholder="Введите e-mail" required>
+        </fieldset>
+
+        <fieldset class="reply__block">
+          <legend class="reply__block__name">Ваше общее впечатление</legend>
+          <input class="reply__block__input--radio" type="radio" name="impression" value="positive" id="imp-positive" checked>
+          <label class="reply__block__label--noncaps" for="imp-positive">Скоре положительное</label>
+
+          <input class="reply__block__input--radio" type="radio" name="impression" value="negatve" id="imp-negative">
+          <label class="reply__block__label--noncaps" for="imp-negative">Скоре отрицательное</label>
+
+          <input class="reply__block__input--radio" type="radio" name="impression" value="dontknow" id="imp-dontknow">
+          <label class="reply__block__label--noncaps" for="imp-dontknow">Затрудняюсь ответить</label>
+        </fieldset>
+
+        <fieldset class="reply__block">
+          <legend class="reply__block__name">Посещенные достопримечательности:</legend>
+          <input class="reply__block__input--checkbox" type="checkbox" name="seeing" value="diabolo-bridge" checked>
+          <label class="reply__block__label--noncaps" for="diabolo-bridge">Мост Дьявола</label>
+
+          <input class="reply__block__input--checkbox" type="checkbox" name="seeing" value="bell-mountain" checked>
+          <label class="reply__block__label--noncaps" for="bell-mountain">Гора-Колокол</label>
+
+          <input class="reply__block__input--checkbox" type="checkbox" name="seeing" value="slide-park" checked>
+          <label class="reply__block__label--noncaps" for="slide-park">Слайд-парк</label>
+
+          <input class="reply__block__input--checkbox" type="checkbox" name="seeing" value="red-rocks">
+          <label class="reply__block__label--noncaps" for="red-rocks">Красные скалы</label>
+        </fieldset>
+
+        <fieldset class="reply__block">
+          <legend class="reply__block__name">Опишите свои эмоции:</legend>
+          <textarea class="reply__block__input--message" name="message" rows="5">Опишите подробно все свои восторги</textarea>
+        </fieldset>
+        <button class="" type="submit">Отправить отзыв</button>
+      </form>
+    </main>
+
+    <footer class="page-footer">
+      <h2 class="page-footer__header">#Visitsedona</h2>
+      <ul class="social-block">
+        <li class="social-block__item">
+          <a href="">Twitter</a>
+        </li>
+        <li class="social-block__item">
+          <a href="">Facebook</a>
+        </li>
+        <li class="social-block__item">
+          <a href="">Youtube</a>
+        </li>
+      </ul>
+      <a href="" class="page-footer__copyright">Разработано<span class="page-footer__academy-logo visually-hidden">HTML-academy</span>
+      </a>
+    </footer>
+
+  </body>
+</html>
