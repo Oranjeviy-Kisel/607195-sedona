@@ -3,94 +3,132 @@
   <head>
     <meta charset="utf-8">
     <title>Фотографии Седоны</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="style.css" rel="stylesheet">
   </head>
-  <body>
 
+  <body>
     <header class="page-header">
       <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__list-item"><a href="index.html">Главная</a></li>
-          <li class="main-nav__list-item"><a href="photo.html">Фото и видео</a></li>
-          <li class="main-nav__list-item"><a href="form.html">Форма отзыва</a></li>
-          <li class="main-nav__list-item"><a>HTML-Academy</a></li>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link">Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru/">HTML-Academy</a>
+          </li>
         </ul>
-        <button class="main-nav__list__closer">Close</button>
-        <a class="main-nav__brand" href="index.html">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="City of Sedona">
+        <a class="brand" href="">
+          <img class="brand-picture" src="img/brand-logo.svg" width="102" height="83" alt="City of Sedona">
         </a>
-        <button class="main-nav__list__hamburger">Menu collapse</button>
+        <button class="main-nav__hamburger">
+          <span class="visually-hidden">Menu collapse</span>
+        </button>
+        <button class="site-list__closer">
+          <span class="visually-hidden">Close</span>
+        </button>
       </nav>
 
-      <div class="page-header__picture">
-        <h1 class="page-header__title">Sedona</h1>
-      </div>
+      <a class="page-header__logo page-header__logo--simple">
+        <h1 class="page-header__title visually-hidden">Sedona</h1>
+      </a>
     </header>
 
     <main>
       <section class="intro">
-        <h2 class="intro__header">Фото и видео</h2>
-        <p class="intro__info">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        <h2 class="intro__header topic-middle">Фото и видео</h2>
+        <p class="intro__info explain-text">
+          Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+        </p>
       </section>
 
       <ul class="gallery">
         <li class="gallery__item">
-          <img class="gallery__item__image"src="http://placehold.it/150x100">
-          <p class="gallery__item__caption">Неродные просторы</p>
-          <p class="gallery__item__caption--autor">Автор фото: Борис</p>
-          <p class="gallery__item__caption--likesamount">
+          <img class="gallery__image" src="http://placehold.it/150x100" alt="Просторы">
+          <p class="gallery__info caption">Неродные просторы</p>
+          <p class="gallery__info caption--autor">Автор фото: Борис</p>
+          <p class="gallery__info caption--likesamount">
             <span class="visually-hidden">Лайки: </span>1350
           </p>
         </li>
 
         <li class="gallery__item">
-          <img class="gallery__item__image" src="http://placehold.it/150x100">
-          <p class="gallery__item__caption">Местная растительность</p>
-          <p class="gallery__item__caption--autor">Автор фото: Сергей</p>
-          <p class="gallery__item__caption--likesamount">
+          <img class="gallery__image" src="http://placehold.it/150x100" alt="Местная растительность">
+          <p class="gallery__info caption">Местная растительность</p>
+          <p class="gallery__info caption--autor">Автор фото: Сергей</p>
+          <p class="gallery__info caption--likesamount">
             <span class="visually-hidden">Лайки: </span>143
           </p>
         </li>
 
         <li class="gallery__item">
-          <img class="gallery__item__image" src="http://placehold.it/150x100">
-          <p class="gallery__item__caption">Дорога на север</p>
-          <p class="gallery__item__caption--autor">Автор фото: Петр</p>
-          <p class="gallery__item__caption--likesamount">
+          <img class="gallery__image" src="http://placehold.it/150x100" alt="Дорога на север">
+          <p class="gallery__info caption">Дорога на север</p>
+          <p class="gallery__info caption--autor">Автор фото: Петр</p>
+          <p class="gallery__info caption--likesamount">
             <span class="visually-hidden">Лайки: </span>96
           </p>
         </li>
 
         <li class="gallery__item">
-          <img class="gallery__item__image" src="http://placehold.it/150x100">
-          <p class="gallery__item__caption">Мост дъявола</p>
-          <p class="gallery__item__caption--autor">Автор фото: Антон</p>
-          <p class="gallery__item__caption--likesamount">
+          <img class="gallery__image" src="http://placehold.it/150x100" alt="Мост Дьявола">
+          <p class="gallery__info caption">Мост дъявола</p>
+          <p class="gallery__info caption--autor">Автор фото: Антон</p>
+          <p class="gallery__info caption--likesamount">
             <span class="visually-hidden">Лайки: </span>254
           </p>
         </li>
       </ul>
 
       <section class="video-block">
-        <h2 class="video-block__header">Все еще сомневаетесь?</h2>
-        <p class="video-block__info">Cмотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <video class="video-block__video" src="" widht="640" height="480" controls poster="http://placehold.it/640x480"></video>
+        <h2 class="video-block__header topic-middle">Все еще сомневаетесь?</h2>
+        <p class="video-block__info explain-text">Cмотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <div class="videoplayer">
+          <video class="videoplayer__screen" src="http://placehold.it/640x480" width="320" height="240" poster="http://placehold.it/640x480"></video>
+          
+          <div class="videoplayer__controls">
+            <input class="timeline" type="range" min="0" max="100" value="0">
+            
+            <div class="videocontroller">
+              <button class="videocontroller__button videocontroler__button--replay">
+                <span class="visually-hidden">Replay</span>
+              </button>
+              <button class="videocontroller__button videocontroler__button--CC">
+                <span class="visually-hidden">CC</span>
+              </button>
+              <button class="videocontroler__button videocontroler__button--fullscreen">
+                <span class="visually-hidden">FullScreen</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <h2 class="page-footer__header">#Visitsedona</h2>
-      <ul class="social-block">
-        <li class="social-block__item">
-          <a href="">Twitter</a>
-        </li>
-        <li class="social-block__item">
-          <a href="">Facebook</a>
-        </li>
-        <li class="social-block__item">
-          <a href="">Youtube</a>
-        </li>
-      </ul>
-      <a href="" class="page-footer__copyright">Разработано<span class="page-footer__academy-logo visually-hidden">HTML-academy</span>
+      <a class="page-footer__header">#Visitsedona</a>
+      <div class="social">  
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="">Twitter</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="">Facebook</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="">Youtube</a>
+          </li>
+        </ul>
+      </div>  
+      <a class="page-footer__copyright" href="">Разработано<span class="visually-hidden">HTML-academy</span>
       </a>
     </footer>
 
