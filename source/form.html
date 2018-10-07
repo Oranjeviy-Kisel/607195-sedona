@@ -31,9 +31,6 @@
         <button class="main-nav__hamburger">
           <span class="visually-hidden">Menu collapse</span>
         </button>
-        <button class="site-list__closer">
-          <span class="visually-hidden">Close</span>
-        </button>
       </nav>
 
       <a class="page-header__logo page-header__logo--simple">
@@ -52,56 +49,58 @@
       <form class="reply" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="reply-group">
           <legend class="reply-group__name topic-middle">Представьтесь</legend>
-          <label class="reply-group__item label-item" for="username">Имя</label>
-          <input class="reply-group__item input-item" type="text" name="username" id="username" placeholder="Петр" required>
+          <label class="reply-group__label-item" for="username">Имя</label>
+          <input class="reply-group__input-item" type="text" name="username" id="username" placeholder="Петр" required>
 
-          <label class="reply-group__item label-item" for="usersurname">Фамилия</label>
-          <input class="reply-group__item input-item" type="text" name="usersurname" id="usersurname" placeholder="Иванов" required>
+          <label class="reply-group__label-item" for="usersurname">Фамилия</label>
+          <input class="reply-group__input-item" type="text" name="usersurname" id="usersurname" placeholder="Иванов" required>
 
-          <label class="reply-group__item reply-group__item--label" for="userpatronymic">Отчество</label>
-          <input class="reply-group__item input-item" type="text" name="userpatronymic" id="userpatronymic" placeholder="Александрович">
+          <label class="reply-group__label-item" for="userpatronymic">Отчество</label>
+          <input class="reply-group__input-item" type="text" name="userpatronymic" id="userpatronymic" placeholder="Александрович">
         </fieldset>
 
         <fieldset class="reply-group">
           <legend class="reply-group__name topic-middle">Контактная информация</legend>
-          <label class="reply-group__item label-item" for="userphone">Контактный телефон*:</label>
-          <input class="reply-group__item input-item" type="text" name="userphone" id="userphone" placeholder="Введите телефон" required>
 
-          <label class="reply-group__item label-item" for="usermail">Электронная почта*</label>
-          <input class="reply-group__item input-item" type="text" name="usermail" id="usermail" placeholder="Введите e-mail" required>
+          <label class="reply-group__label-item" for="userphone">Контактный телефон*:</label>
+          <input class="reply-group__input-item" type="text" name="userphone" id="userphone" placeholder="Введите телефон" required>
+
+          <label class="reply-group__label-item" for="usermail">Электронная почта*</label>
+          <input class="reply-group__input-item" type="text" name="usermail" id="usermail" placeholder="Введите e-mail" required>
         </fieldset>
 
         <fieldset class="reply-group">
           <legend class="reply-group__name topic-middle">Ваше общее впечатление</legend>
-          <input class="reply-group__item radio-item" type="radio" name="impression" value="positive" id="imp-positive" checked>
-          <label class="reply-group__item label-item--noncaps" for="imp-positive">Скоре положительное</label>
 
-          <input class="reply-group__item radio-item" type="radio" name="impression" value="negatve" id="imp-negative">
-          <label class="reply-group__item label-item--noncaps" for="imp-negative">Скоре отрицательное</label>
+          <input class="reply-group__radio-item" type="radio" name="impression" value="positive" id="imp-positive" checked>
+          <label class="reply-group__label-item reply-group__label-item--noncaps" for="imp-positive">Скоре положительное</label>
 
-          <input class="reply-group__item radio-item" type="radio" name="impression" value="dontknow" id="imp-dontknow">
-          <label class="reply-group__item label-item--noncaps" for="imp-dontknow">Затрудняюсь ответить</label>
+          <input class="reply-group__radio-item" type="radio" name="impression" value="negatve" id="imp-negative">
+          <label class="reply-group__label-item reply-group__label-item--noncaps" for="imp-negative">Скоре отрицательное</label>
+
+          <input class="reply-group__radio-item" type="radio" name="impression" value="dontknow" id="imp-dontknow">
+          <label class="reply-group__label-item reply-group__label-item--noncaps" for="imp-dontknow">Затрудняюсь ответить</label>
         </fieldset>
 
         <fieldset class="reply-group">
           <legend class="reply-group__name topic-middle">Посещенные достопримечательности:</legend>
 
-          <input class="reply-group__item checkbox-item" type="checkbox" name="seeing" id="diabolo-bridge" value="diabolo-bridge" checked>
-          <label class="reply-group__item label-item--noncaps" for="diabolo-bridge">Мост Дьявола</label>
+          <input class="reply-group__checkbox-item" type="checkbox" name="seeing" id="diabolo-bridge" value="diabolo-bridge" checked>
+          <label class="reply-group__label-item reply-group__label-item--noncaps" for="diabolo-bridge">Мост Дьявола</label>
 
           <input class="reply-group__item checkbox-item" type="checkbox" name="seeing" id="bell-mountain" value="bell-mountain" checked>
-          <label class="reply-group__item label-item--noncaps" for="bell-mountain">Гора-Колокол</label>
+          <label class="reply-group__label-item reply-group__label-item--noncaps" for="bell-mountain">Гора-Колокол</label>
 
-          <input class="reply-group__item checkbox-item" type="checkbox" name="seeing" id="slide-park" value="slide-park" checked>
-          <label class="reply-group__item label-item--noncaps" for="slide-park">Слайд-парк</label>
+          <input class="reply-group__checkbox-item" type="checkbox" name="seeing" id="slide-park" value="slide-park" checked>
+          <label class="reply-group__label-item reply-group__label-item--noncaps" for="slide-park">Слайд-парк</label>
 
-          <input class="reply-group__item checkbox-item" type="checkbox" name="seeing" id="red-rocks" value="red-rocks">
-          <label class="reply-group__item label-item--noncaps" for="red-rocks">Красные скалы</label>
+          <input class="reply-group__checkbox-item" type="checkbox" name="seeing" id="red-rocks" value="red-rocks">
+          <label class="reply-group__label-item reply-group__label-item--noncaps" for="red-rocks">Красные скалы</label>
         </fieldset>
 
         <fieldset class="reply-group">
           <legend class="reply-group__name topic-middle">Опишите свои эмоции:</legend>
-          <textarea class="reply-group__item message-item" name="message" rows="5">Опишите подробно все свои восторги</textarea>
+          <textarea class="reply-group__message-item" name="message" rows="5">Опишите подробно все свои восторги</textarea>
         </fieldset>
         <button class="reply_submitter" type="submit">Отправить отзыв</button>
       </form>
