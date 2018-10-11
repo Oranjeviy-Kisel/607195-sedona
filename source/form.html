@@ -5,28 +5,27 @@
     <title>Оставить отзыв</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-
   <body>
     <header class="page-header">
       <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">Главная</a>
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">
+            <a class="main-nav__list-link" href="index.html">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="photo.html">Фото и видео</a>
+          <li class="main-nav__list-item">
+            <a class="main-nav__list-link" href="photo.html">Фото и видео</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link">Форма отзыва</a>
+          <li class="main-nav__list-item">
+            <a class="main-nav__list-link">Форма отзыва</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="https://htmlacademy.ru/">HTML-Academy</a>
+          <li class="main-nav__list-item">
+            <a class="main-nav__list-link" href="https://htmlacademy.ru/">HTML-Academy</a>
           </li>
         </ul>
-        <a class="brand" href="">
-          <img class="brand-picture" src="img/brand-logo.svg" width="102" height="83" alt="City of Sedona">
+        <a class="brand" href="index.html">
+          <img class="brand-picture" src="../img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona">
         </a>
         <button class="main-nav__hamburger">
           <span class="visually-hidden">Menu collapse</span>
@@ -40,19 +39,19 @@
 
     <main>
       <section class="intro">
-        <h2 class="intro__header topic-middle">Оставьте свой отзыв</h2>
-        <p class="intro__info explain-text">
+        <h2 class="intro__header">Оставьте свой отзыв</h2>
+        <p class="intro__info">
           Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
         </p>
       </section>
 
       <form class="reply" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="reply-group">
-          <legend class="reply-group__name topic-middle">Представьтесь</legend>
-          <label class="reply-group__label-item" for="username">Имя</label>
+          <legend class="reply-group__name">Представьтесь:</legend>
+          <label class="reply-group__label-item" for="username">Имя*</label>
           <input class="reply-group__input-item" type="text" name="username" id="username" placeholder="Петр" required>
 
-          <label class="reply-group__label-item" for="usersurname">Фамилия</label>
+          <label class="reply-group__label-item" for="usersurname">Фамилия*</label>
           <input class="reply-group__input-item" type="text" name="usersurname" id="usersurname" placeholder="Иванов" required>
 
           <label class="reply-group__label-item" for="userpatronymic">Отчество</label>
@@ -60,7 +59,7 @@
         </fieldset>
 
         <fieldset class="reply-group">
-          <legend class="reply-group__name topic-middle">Контактная информация</legend>
+          <legend class="reply-group__name">Контактная информация</legend>
 
           <label class="reply-group__label-item" for="userphone">Контактный телефон*:</label>
           <input class="reply-group__input-item" type="text" name="userphone" id="userphone" placeholder="Введите телефон" required>
@@ -69,58 +68,66 @@
           <input class="reply-group__input-item" type="text" name="usermail" id="usermail" placeholder="Введите e-mail" required>
         </fieldset>
 
-        <fieldset class="reply-group">
-          <legend class="reply-group__name topic-middle">Ваше общее впечатление</legend>
+        <fieldset class="reply-group radio-group">
+          <legend class="reply-group__name">Ваше общее впечатление:</legend>
 
-          <input class="reply-group__radio-item" type="radio" name="impression" value="positive" id="imp-positive" checked>
-          <label class="reply-group__label-item reply-group__label-item--noncaps" for="imp-positive">Скоре положительное</label>
+          <input class="reply-group__radio-item visually-hidden" type="radio" name="impression" value="positive" id="imp-positive" checked>
+          <label class="reply-group__label-item reply-group__label-item--noncaps" for="imp-positive">Скорее положительное
+          </label>
 
-          <input class="reply-group__radio-item" type="radio" name="impression" value="negatve" id="imp-negative">
-          <label class="reply-group__label-item reply-group__label-item--noncaps" for="imp-negative">Скоре отрицательное</label>
+          <input class="reply-group__radio-item visually-hidden" type="radio" name="impression" value="negatve" id="imp-negative">
+          <label class="reply-group__label-item reply-group__label-item--noncaps" for="imp-negative">Скорее отрицательное
+          </label>
 
-          <input class="reply-group__radio-item" type="radio" name="impression" value="dontknow" id="imp-dontknow">
-          <label class="reply-group__label-item reply-group__label-item--noncaps" for="imp-dontknow">Затрудняюсь ответить</label>
+          <input class="reply-group__radio-item visually-hidden" type="radio" name="impression" value="dontknow" id="imp-dontknow">
+          <label class="reply-group__label-item reply-group__label-item--noncaps" for="imp-dontknow">Затрудняюсь ответить
+          </label>
         </fieldset>
 
-        <fieldset class="reply-group">
-          <legend class="reply-group__name topic-middle">Посещенные достопримечательности:</legend>
+        <fieldset class="reply-group check-group">
+          <legend class="reply-group__name">Посещенные достопримечательности:</legend>
 
-          <input class="reply-group__checkbox-item" type="checkbox" name="seeing" id="diabolo-bridge" value="diabolo-bridge" checked>
+          <input class="reply-group__checkbox-item visually-hidden" type="checkbox" name="seeing" id="diabolo-bridge" value="diabolo-bridge" checked>
           <label class="reply-group__label-item reply-group__label-item--noncaps" for="diabolo-bridge">Мост Дьявола</label>
 
-          <input class="reply-group__item checkbox-item" type="checkbox" name="seeing" id="bell-mountain" value="bell-mountain" checked>
+          <input class="reply-group__item checkbox-item visually-hidden" type="checkbox" name="seeing" id="bell-mountain" value="bell-mountain" checked>
           <label class="reply-group__label-item reply-group__label-item--noncaps" for="bell-mountain">Гора-Колокол</label>
 
-          <input class="reply-group__checkbox-item" type="checkbox" name="seeing" id="slide-park" value="slide-park" checked>
+          <input class="reply-group__checkbox-item visually-hidden" type="checkbox" name="seeing" id="slide-park" value="slide-park" checked>
           <label class="reply-group__label-item reply-group__label-item--noncaps" for="slide-park">Слайд-парк</label>
 
-          <input class="reply-group__checkbox-item" type="checkbox" name="seeing" id="red-rocks" value="red-rocks">
+          <input class="reply-group__checkbox-item visually-hidden" type="checkbox" name="seeing" id="red-rocks" value="red-rocks">
           <label class="reply-group__label-item reply-group__label-item--noncaps" for="red-rocks">Красные скалы</label>
         </fieldset>
 
         <fieldset class="reply-group">
-          <legend class="reply-group__name topic-middle">Опишите свои эмоции:</legend>
+          <legend class="reply-group__name ">Опишите свои эмоции:</legend>
           <textarea class="reply-group__message-item" name="message" rows="5">Опишите подробно все свои восторги</textarea>
         </fieldset>
-        <button class="reply_submitter" type="submit">Отправить отзыв</button>
+        <button class="reply_submitter button-filled" type="submit">Отправить отзыв</button>
       </form>
     </main>
     <footer class="page-footer">
       <a class="page-footer__header">#Visitsedona</a>
-      <div class="social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="">Twitter</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="">Facebook</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="">Youtube</a>
-          </li>
-        </ul>
-      </div>
-      <a class="page-footer__copyright" href="">Разработано<span class="visually-hidden">HTML-academy</span>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">
+            <span class="visually-hidden">Twitter</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="#">
+            <span class="visually-hidden">Youtube</span>
+          </a>
+        </li>
+      </ul>
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/">
+        Разработано<span class="visually-hidden"> HTML-academy</span>
       </a>
     </footer>
   </body>

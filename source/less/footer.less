@@ -1,0 +1,67 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-footer__header {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.social__list {
+  .list-reset();
+  width: 151px;
+  display: flex;
+  justify-content: space-between;
+  margin: 32px auto 0;
+}
+
+.social__item {
+  width: 46px;
+  height: 48px;
+  background-color: @colorlightblue;
+}
+
+.social__link {
+  display: block;
+  width: inherit;
+  height: inherit;
+  color: white;
+
+  &--twitter {
+    background: url("../img/icon-twitter.svg") center no-repeat;
+    background-size: 30px auto;
+  }
+
+  &--youtube {
+    background: url("../img/icon-youtube.svg") center no-repeat;
+    background-size: 30px auto;
+  }
+
+  &--facebook {
+    background: url("../img/icon-facebook.svg") center no-repeat;
+    background-size: auto 30px;
+  }
+}
+
+.page-footer__copyright {
+  .explain-text();
+  text-decoration: none;
+  color: @colorblack;
+  position: relative;
+  margin: 30px 0 20px 0;
+}
+
+.page-footer__copyright::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/htmlacademy.svg");
+}
