@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
+  <header class="page-header">
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__list-item">
@@ -24,18 +24,21 @@
             <a class="main-nav__list-link" href="https://htmlacademy.ru/">HTML-Academy</a>
           </li>
         </ul>
-        <a class="brand" href="index.html">
-          <img class="brand-picture" src="../img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona">
+        <a class="main-nav__brand" href="index.html">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona">
         </a>
-        <button class="main-nav__hamburger">
+        <button class="main-nav__switcher main-nav__switcher--hamburger">
+          <span class="visually-hidden">Menu collapse</span>
+        </button>
+        <button class="main-nav__switcher main-nav__switcher--closer">
           <span class="visually-hidden">Menu collapse</span>
         </button>
       </nav>
-      <a class="page-header__logo page-header__logo--simple" href="">
+      <a class="page-header__logo page-header__logo--simple">
         <h1 class="page-header__title visually-hidden">Sedona</h1>
       </a>
     </header>
-    <main>
+    <main class="page-main">
       <section class="intro">
         <h2 class="intro__header">Фото и видео</h2>
         <p class="intro__info">
@@ -82,15 +85,15 @@
         <div class="videoplayer">
           <video class="videoplayer__screen" src="http://placehold.it/640x480" width="320" height="201" poster="../img/video-mobile@1x.jpg"></video>
           <div class="videoplayer__controls">
-            <input class="timeline" type="range" min="0" max="100" value="20">
-            <div class="videocontroller">
-              <button class="videocontroller__button videocontroller__button--replay">
+            <input class="videoplayer__timeline" type="range" min="0" max="100" value="20">
+            <div class="videoplayer__buttons">
+              <button class="videoplayer__button videoplayer__button--replay">
                 <span class="visually-hidden">Replay</span>
               </button>
-              <button class="videocontroller__button videocontroller__button--CC">
+              <button class="videoplayer__button videoplayer__button--CC">
                 <span class="visually-hidden">CC</span>
               </button>
-              <button class="videocontroller__button videocontroller__button--fullscreen">
+              <button class="videoplayer__button videoplayer__button--fullscreen">
                 <span class="visually-hidden">FullScreen</span>
               </button>
             </div>
@@ -100,7 +103,7 @@
     </main>
     <footer class="page-footer">
       <a class="page-footer__header">#Visitsedona</a>
-      <ul class="social__list">
+      <ul class="social">
         <li class="social__item">
           <a class="social__link social__link--twitter" href="#">
             <span class="visually-hidden">Twitter</span>

@@ -1,10 +1,10 @@
-.advantages {
+.advantage {
   display: flex;
   flex-direction: column;
   .list-reset();
 }
 
-.advantage {
+.advantage__item {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -27,26 +27,25 @@
   .topic-middle();
 }
 
-.pseido-lined() {
-  content: "-";
-  position: absolute;
-  transform: scaleX(4) scaleY(1);
-}
-
 .advantage__number {
   margin: 16px 0 0 0;
   position: relative;
   align-self: center;
-}
 
-.advantage__number::before {
-  .pseido-lined();
-  left: -20px;
-}
+  &::before,
+  &::after {
+    content: "-";
+    position: absolute;
+    transform: scaleX(4) scaleY(1);
+  }
 
-.advantage__number::after {
-  .pseido-lined();
-  right: -20px;
+  &::before {
+    left: -20px;
+  }
+
+  &::after {
+    right: -20px;
+  }
 }
 
 .advantage__info {
