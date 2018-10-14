@@ -1,0 +1,31 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-footer__header {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.page-footer__copyright {
+  .explain-text();
+  text-decoration: none;
+  color: @colorblack;
+  position: relative;
+  margin: 30px 0 20px 0;
+}
+
+.page-footer__copyright::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/htmlacademy.svg");
+}

@@ -1,0 +1,28 @@
+/*------------------header----------------*/
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #73b1e5 no-repeat 50% 0;
+
+  &--simple {
+    background-color: @colorwhite;
+    height: 157px;
+    background-image: url("../img/text-sedona.svg"), url("../img/bg-back-mobile@1x.jpg");
+    background-size: 229px 39px, 768px 389px;
+    background-position: center center, center bottom;
+  }
+
+  &--full {
+    background-color: @colorwhite;
+    height: 389px;
+    background-image: url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
+    background-size: 280px 213px, 768px 389px;
+    background-position: center center, center bottom;
+  }
+}
