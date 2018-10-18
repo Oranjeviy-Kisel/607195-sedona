@@ -10,6 +10,11 @@
   width: 46px;
   height: 48px;
   background-color: @colorlightblue;
+
+  &:hover,
+  &:focus {
+    background-color: @colormediumblue;
+  }
 }
 
 .social__link {
@@ -31,5 +36,11 @@
   &--facebook {
     background: url("../img/icon-facebook.svg") center no-repeat;
     background-size: auto 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    margin: 0 auto 0;
   }
 }

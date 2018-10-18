@@ -23,12 +23,22 @@ img {
 }
 
 .button-filled {
+  padding: 0;
   display: inline-block;
   height: 58px;
   color: @colorwhite;
   .topic-middle();
   font-size: 21px;
-  border: none;
+  border: 0;
   background-color: @colorlightblue;
   cursor: pointer;
+
+  &:hover {
+    background-color: @colormediumblue;
+  }
+
+  &:active {
+    background-color: @colordarkblue;
+    color: fadeout(@colorwhite, 70%);
+  }
 }

@@ -1,23 +1,25 @@
 .main-nav {
-  margin-bottom: -33px;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  margin-bottom: -33px;
 }
 
 .main-nav__list {
   .list-reset();
-  display: flex;
+  display: none;
   flex-direction: column;
+
+  &--noscript {
+    display: flex;
+  }
 }
 
 .main-nav__list-item {
   margin-bottom: 0;
   text-align: center;
-  background-color: @colorlightblue;
-  box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.2) inset,
-    0 -1px 0 0 rgba(1, 1, 1, 0.2) inset;
 
-  &:last-child {
+  &:last-child .main-nav__list-link {
     box-shadow:
       0 1px 0 0 rgba(255, 255, 255, 0.2) inset,
       0 -7px 7px -7px rgba(0, 0, 0, 1) inset;
@@ -28,27 +30,54 @@
   display: block;
   .topic-middle();
   padding: 13px 0 17px;
-  color: #ffffff;
+  color: @colorwhite;
   text-decoration: none;
+  background-color: @colorlightblue;
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.2) inset,
+    0 -1px 0 0 rgba(1, 1, 1, 0.2) inset;
+
+  &:hover {
+    background-color: @colormediumblue;
+  }
+
+  &:active {
+    background-color: @colordarkblue;
+  }
+
+  &:not([href]) {
+    background-color: @colorlightblue;
+  }
 }
 
 .main-nav__brand {
-  left: 51px;
+  position: relative;
+  width: 102px;
+  left: calc(50% - 51px);
 }
 
 .main-nav__switcher {
-  position: absolute;
+  display: block;
+  background-color: green;
+  cursor: pointer;
+  padding: 0;
 
   &--hamburger {
-    background: none;
-    border: none;
-    padding: 0;
-    right: 20px;
+    position: absolute;
+    right: 10px;
     bottom: 49px;
+    width: 27px;
+    height: 24px;
+    background: green;
+    text-align: center;
+    border: 2px solid red;
 
     &::before {
       content: "";
-      display: inline-block;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
       width: 23px;
       height: 20px;
       background-image: linear-gradient(#81b3d2 0, #81b3d2 4px, transparent 4px, transparent 8px, #81b3d2 8px, #81b3d2 12px, transparent 12px, transparent 16px, #81b3d2 16px, #81b3d2 20px);
@@ -56,19 +85,21 @@
   }
 
   &--closer {
+    position: absolute;
     top: 15px;
-    right: 34px;
-    width: 23px;
-    height: 23px;
-    background: transparent;
-    border: 0;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    background: red;
+    text-align: center;
+    border: 2px solid red;
 
     &::before {
       content: "";
       position: absolute;
-      top: 50%;
-      left: 50%;
       display: block;
+      top: 8px;
+      left: -4px;
       width: 28px;
       height: 4px;
       background-color: @colorwhite;
@@ -78,13 +109,87 @@
     &::after {
       content: "";
       position: absolute;
-      top: 50%;
-      left: 50%;
       display: block;
+      top: 8px;
+      left: -4px;
       width: 28px;
       height: 4px;
       background-color: @colorwhite;
       transform: rotate(-45deg);
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    margin-bottom: 0;
+    background-color: @colorwhite;
+  }
+
+  .main-nav__brand {
+    position: absolute;
+    left: calc(50% - 51px);
+  }
+
+  .main-nav__switcher {
+    display: none;
+  }
+
+  .main-nav__list {
+    .list-reset();
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 20px;
+
+    &::before {
+      content: "";
+      display: block;
+      min-width: 180px;
+      height: inherit;
+      background: red;
+      order: 0;
+      margin-left: 25px;
+    }
+  }
+
+  .main-nav__list-item {
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: none;
+
+    &:first-child,
+    &:nth-child(2) {
+      order: -1;
+    }
+
+    &:last-child .main-nav__list-link {
+      box-shadow: none;
+    }
+  }
+
+  .main-nav__list-link {
+    display: block;
+    .explain-text();
+    font-weight: bold;
+    color: @colorblack;
+    padding: 15px 0 15px;
+    background: none;
+    box-shadow: none;
+
+    &:hover {
+      background: none;
+      color: @colorlightblue;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    &:not([href]) {
+      background: none;
+      color: @colorbrown;
     }
   }
 }

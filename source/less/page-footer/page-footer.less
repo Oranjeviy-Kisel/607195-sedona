@@ -17,15 +17,27 @@
   .explain-text();
   text-decoration: none;
   color: @colorblack;
-  position: relative;
-  margin: 30px 0 20px 0;
+  margin: 20px 0 20px 0;
 }
 
-.page-footer__copyright::after {
-  content: "";
-  position: absolute;
-  top: -8px;
-  width: 40px;
-  height: 40px;
-  background-image: url("../img/htmlacademy.svg");
+.page-footer__copyright svg {
+  position: relative;
+  margin-left: 10px;
+  top: 13px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: center;
+    padding: 38px 60px 40px;
+  }
+
+  .page-footer__header {
+    margin: 9px -8px 0 0;
+  }
+
+  .page-footer__copyright {
+    margin: -7px 0 0 0;
+  }
 }

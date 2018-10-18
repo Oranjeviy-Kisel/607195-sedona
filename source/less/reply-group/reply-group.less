@@ -13,6 +13,12 @@
     flex-direction: column;
     align-content: flex-start;
   }
+
+  &--contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 .reply-group__name {
@@ -85,23 +91,26 @@
   box-sizing: border-box;
   background-color: @colorF2grey;
   flex-grow: 1;
-  margin: 0 0 10px auto;
+  margin: 0 0 10px 0;
   padding: 0 20px 0 20px;
-  width: 60%;
   height: 58px;
-  border: none;
+  border: 1px solid red;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
 }
 
-.reply-group__radio-item:checked + .reply-group__label-item::before {
-  box-shadow: 0 0 0 18px @colorF2grey inset;
+.reply-group__radio-item:checked + &.reply-group__label-item {
+  &::before {
+    box-shadow: 0 0 0 18px @colorF2grey inset;
+  }
 }
 
-.reply-group__checkbox-item:checked + .reply-group__label-item::before {
-  background: @colorF2grey url("../img/icon-tick.svg") center no-repeat;
+.reply-group__checkbox-item:checked + &.reply-group__label-item {
+  &::before {
+    background: @colorF2grey url("../img/icon-tick.svg") center no-repeat;
+  }
 }
 
 .reply-group__message-item {
@@ -113,4 +122,49 @@
   text-transform: none;
   color: @colorblack;
   padding: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .reply-group {
+    width: 50%;
+  }
+
+  .reply-group--contacts {
+    order: 0;
+    flex-basis: 100%;
+    display: flex;
+  }
+
+  .reply-group--introduce {
+    text-align: left;
+  }
+
+  .reply-group--radio-group {
+    order: -1;
+    text-align: left;
+  }
+
+  .reply-group--check-group {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .reply-group__label-item {
+    .reply-group--check-group & {
+      border: 1px solid red;
+      width: 35%;
+      margin: 0;
+    }
+  }
+
+  .reply-group__name {
+    .topic-middle21();
+  }
+
+  .reply-group--message-group {
+    flex-basis: 100%;
+  }
 }

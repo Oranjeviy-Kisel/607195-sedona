@@ -7,3 +7,27 @@
 .reply__submitter {
   margin-top: 20px;
 }
+
+.reply__footnote {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .reply {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 60px;
+    justify-content: space-between;
+  }
+
+  .reply__submitter {
+    flex-basis: 50%;
+    align-self: baseline;
+  }
+
+  .reply__footnote {
+    display: block;
+    align-self: baseline;
+  }
+}
