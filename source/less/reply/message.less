@@ -1,0 +1,26 @@
+.message {
+  background-color: #40E0D0;
+
+  &::before {
+    content: "Опишите свои эмоции:";
+    .group-name();
+  }
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+
+.message__item {
+  box-sizing: border-box;
+  background-color: @colorF2grey;
+  resize: none;
+  border: 0 solid transparent;
+  .topic-middle();
+  text-transform: none;
+  color: @colorblack;
+  padding: 20px;
+  width: 100%;
+}

@@ -8,10 +8,9 @@
 .main-nav__list {
   .list-reset();
   display: none;
-  flex-direction: column;
 
   &--noscript {
-    display: flex;
+    display: block;
   }
 }
 
@@ -53,7 +52,12 @@
 .main-nav__brand {
   position: relative;
   width: 102px;
-  left: calc(50% - 51px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+  }
 }
 
 .main-nav__switcher {
@@ -126,11 +130,6 @@
     background-color: @colorwhite;
   }
 
-  .main-nav__brand {
-    position: absolute;
-    left: calc(50% - 51px);
-  }
-
   .main-nav__switcher {
     display: none;
   }
@@ -142,26 +141,16 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding-left: 20px;
-
-    &::before {
-      content: "";
-      display: block;
-      min-width: 180px;
-      height: inherit;
-      background: red;
-      order: 0;
-      margin-left: 25px;
-    }
   }
 
   .main-nav__list-item {
     margin: 0 auto;
     text-align: center;
     box-shadow: none;
+    width: 20%;
 
-    &:first-child,
     &:nth-child(2) {
-      order: -1;
+      margin-right: 20%;
     }
 
     &:last-child .main-nav__list-link {

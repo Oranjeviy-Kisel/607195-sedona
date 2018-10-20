@@ -1,0 +1,30 @@
+.introduce {
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+
+  &::before {
+    content: "Представьтесь:";
+    .group-name();
+  }
+}
+
+.introduce__block {
+  box-sizing: border-box;
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  margin: 0 0 20px 0;
+  background-color: green;
+}
+
+.introduce__label {
+  .explain-text();
+  margin-right: 10px;
+}
+
+.introduce__field {
+  flex-grow: 1;
+/*   flex-grow: 0; */
+  .input-style();
+}

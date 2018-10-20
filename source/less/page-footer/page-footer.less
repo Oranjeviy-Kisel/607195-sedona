@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .page-footer__header {
@@ -10,14 +11,14 @@
   line-height: 26px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 40px;
+  margin-top: 75px;
 }
 
 .page-footer__copyright {
   .explain-text();
   text-decoration: none;
   color: @colorblack;
-  margin: 20px 0 20px 0;
+  margin: 28px 0 20px 0;
 }
 
 .page-footer__copyright svg {
@@ -39,5 +40,15 @@
 
   .page-footer__copyright {
     margin: -7px 0 0 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: 1200px;
+    background-color: @colorwhite;
+    margin: 0 auto;
+    padding: 36px 120px 50px;
+    .desktop-shadow();
   }
 }

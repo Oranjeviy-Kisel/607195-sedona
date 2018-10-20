@@ -8,23 +8,14 @@
   &::before {
     content: "";
     position: absolute;
-    top: -26px;
     display: block;
     box-sizing: border-box;
     width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
     height: 26px;
-    background-image: url("../../img/bg-intro-triangle-mobile.svg");
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -16px;
-    display: block;
-    box-sizing: border-box;
-    width: 320px;
-    height: 37px;
-    background-image: url("../../img/bg-triangle.svg");
+    top: -26px;
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
   }
 }
 
@@ -36,7 +27,7 @@
 
 .intro__info {
   .explain-text();
-  margin: 30px 0 25px 0;
+  margin: 25px 0 19px 0;
   padding: 0 24px;
 }
 
@@ -46,7 +37,7 @@
       top: -57px;
       width: 768px;
       height: 57px;
-      background-image: url("../../img/bg-intro-triangle-tablet.svg");
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
     }
 
     &::after {
@@ -66,7 +57,30 @@
   }
 
   .intro__info {
-    margin-bottom: 50px;
+    margin: 30px 0 52px 0;
     padding: 0 120px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    &::before {
+      top: -57px;
+      width: 1200px;
+      height: 57px;
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+    }
+  }
+
+  .intro__header {
+    padding: 0 300px;
+
+    &--huge {
+      margin: 110px 0 0 0;
+    }
+  }
+
+  .intro__info {
+    padding: 0 350px 0;
   }
 }

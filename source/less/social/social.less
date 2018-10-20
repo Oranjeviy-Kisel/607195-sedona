@@ -1,29 +1,26 @@
 .social {
   .list-reset();
-  width: 151px;
   display: flex;
+  width: 151px;
   justify-content: space-between;
-  margin: 32px auto 0;
+  margin: 35px auto 0;
+  background-color: red;
 }
 
-.social__item {
+.social__itm {
+  background-color: @colorlightblue;
   width: 46px;
   height: 48px;
-  background-color: @colorlightblue;
-
-  &:hover,
-  &:focus {
-    background-color: @colormediumblue;
-  }
+  margin: 0;
 }
 
-.social__link {
+.social__lynk {
   display: block;
-  width: inherit;
-  height: inherit;
   color: white;
+  width: 46px;
+  height: 48px;
 
-  &--twitter {
+  &--tw {
     background: url("../img/icon-twitter.svg") center no-repeat;
     background-size: 30px auto;
   }
@@ -33,11 +30,17 @@
     background-size: 30px auto;
   }
 
-  &--facebook {
+  &--fb {
     background: url("../img/icon-facebook.svg") center no-repeat;
     background-size: auto 30px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: @colormediumblue;
+  }
 }
+
 
 @media (min-width: @tablet-width) {
   .social {
