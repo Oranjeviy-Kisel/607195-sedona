@@ -21,9 +21,13 @@
     background-color: @colorwhite;
 
     &::before {
-      .grey-line-horizontal();
-      margin-top: 20px;
-      z-index:-1;
+      .grey-line-left();
+      margin-top: 10px;
+    }
+
+    &::after {
+      .grey-line-right();
+      margin-top: 10px;
     }
   }
 }
@@ -36,7 +40,7 @@
     width: 480px;
     padding: 0;
     margin: 0 auto;
-    background-color: #ddaaaa;
+    /* background-color: #ddaaaa; */
   }
 
   @media (min-width: @desktop-width) {
@@ -50,8 +54,8 @@
   padding: 0 0 55px 80px;
   .topic-middle();
   text-transform: none;
-  background-color: pink;
-  box-shadow: 0 0 2px 0 blue inset;
+  /* background-color: pink; */
+  /* box-shadow: 0 0 2px 0 blue inset; */
 
   &::before {
     content: "";

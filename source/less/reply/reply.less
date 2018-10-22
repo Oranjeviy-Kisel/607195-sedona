@@ -1,9 +1,9 @@
 .reply {
   box-sizing: border-box;
   display: block;
-  width: 320px;
   padding: 0;
   margin: 0 auto;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: auto;
@@ -23,16 +23,25 @@
 .reply__group {
   box-sizing: border-box;
   display: block;
-  width: 100%;
-  margin: 0;
+  width: 280px;
+  margin: 0 auto 0;
   border: 0;
-  padding: 4px 20px 6px;
-  box-shadow:
-    0 1px 0 0 @colorE5grey,
-    0 1px 0 0 @colorE5grey inset;
+  padding: 0 20px 0;
+  /*   box-shadow:
+  0 1px 0 0 @colorE5grey,
+  0 1px 0 0 @colorE5grey inset; */
+
+  &::before {
+    .grey-line-horizontal();
+
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    box-shadow: none;
+    /* box-shadow: none; */
     padding: 4px 0 6px;
     width: 50%;
   }

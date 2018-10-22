@@ -23,8 +23,12 @@
     background-color: @colorwhite;
 
     &::before {
-      .grey-line-horizontal();
-      z-index: -1;
+      .grey-line-left();
+      margin-top: 10px;
+    }
+
+    &::after {
+      .grey-line-right();
       margin-top: 10px;
     }
   }

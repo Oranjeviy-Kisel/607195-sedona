@@ -21,9 +21,13 @@
     background-color: @colorwhite;
 
     &::before {
-      .grey-line-horizontal();
+      .grey-line-left();
       margin-top: 10px;
-      z-index: -1;
+    }
+
+    &::after {
+      .grey-line-right();
+      margin-top: 10px;
     }
   }
 }
