@@ -1,3 +1,19 @@
+.desktop-shadow() {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: -10px;
+    width: 1220px;
+    z-index: -10;
+    background-image: linear-gradient(to right, transparent 0, rgba(0, 0, 0, 0.3) 10px, @colorwhite 11px, @colorwhite 1209px, rgba(0, 0, 0, 0.3) 1210px, transparent 1220px);
+  }
+}
+
 .list-reset() {
   padding: 0;
   margin: 0;
@@ -12,11 +28,21 @@
   text-transform: uppercase;
 }
 
+.topic-middle21() {
+  .topic-middle;
+  font-size: 21px;
+}
+
+.topic-middle30() {
+  .topic-middle;
+  font-size: 30px;
+}
+
 .explain-text() {
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 24px;
   text-transform: uppercase;
   color: @color33grey;
 }
@@ -32,4 +58,14 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
+  text-transform: none;
+}
+
+.grey-line-horizontal() {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  background-color: @colorDBgrey;
 }

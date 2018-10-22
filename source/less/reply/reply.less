@@ -1,9 +1,58 @@
 .reply {
+  box-sizing: border-box;
   display: block;
-  padding: 0 20px;
+  width: 320px;
+  padding: 0;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 60px;
+    justify-content: space-between;
+    margin-top: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+  }
+}
+
+.reply__group {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  padding: 4px 20px 6px;
+  box-shadow:
+    0 1px 0 0 @colorE5grey,
+    0 1px 0 0 @colorE5grey inset;
+
+  @media (min-width: @tablet-width) {
+    box-shadow: none;
+    padding: 4px 0 6px;
+    width: 50%;
+  }
 }
 
 .reply__submitter {
   margin-top: 20px;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    flex-basis: 50%;
+    align-self: baseline;
+  }
+}
+
+.reply__footnote {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    align-self: baseline;
+  }
 }

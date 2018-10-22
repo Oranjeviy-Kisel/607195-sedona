@@ -1,60 +1,137 @@
 .advantage {
-  display: flex;
-  flex-direction: column;
   .list-reset();
+  position: relative;
+  background: grey;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 37px;
+    top: -22px;
+    background-image: url("../img/bg-triangle.svg");
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .advantage__item {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 320px;
-  margin: 0 auto;
+  &--emphasized {
+    box-sizing: border-box;
+    color: white;
+    background: @colorlightblue;
+    /* box-shadow: 0 0 4px 0 black inset; */
 
-  &--common {
-    background-color: @colorgrey;
-    margin-bottom: 1px;
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      &:nth-child(2n) .advantage__header {
+        order: 2;
+      }
+    }
   }
 
-  &--emphasized {
-    background-color: @colorlightblue;
-    color: @colorwhite;
+  &--common {
+    box-sizing: border-box;
+    background: @colorgrey;
+    /* box-shadow: 0 0 4px 0 black inset; */
+    flex-grow: 1;
+  }
+}
+
+.advantage__picture {
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    height: 256px;
+    flex-grow: 1;
   }
 }
 
 .advantage__header {
-  margin: 35px 0 0 0;
+  margin: 0;
   .topic-middle();
+
+  @media (min-width: @tablet-width) {
+    width: 256px;
+    box-sizing: border-box;
+    .topic-middle21();
+    margin: 0 auto;
+
+    &--emphasized {
+      padding: 40px 25px 0;
+    }
+
+    &--common {
+      padding: 44px 40px 60px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    padding: 50px 70px 0;
+
+    &--common {
+      padding: 44px 100px 60px;
+    }
+  }
 }
 
 .advantage__number {
-  margin: 16px 0 0 0;
+  margin: 7px 0 0 0;
   position: relative;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
   align-self: center;
+  display: block;
 
   &::before,
   &::after {
     content: "-";
     position: absolute;
-    transform: scaleX(4) scaleY(1);
   }
 
   &::before {
-    left: -20px;
+    left: 50%;
+    transform: translateX(-25px) scaleX(2) scaleY(1);
   }
 
   &::after {
-    right: -20px;
+    right: 50%;
+    transform: translateX(25px) scaleX(2) scaleY(1);
   }
 }
 
 .advantage__info {
   .explain-text();
-  margin: 16px 0 28px 0;
-  padding: 0 32px;
+  display: block;
+  margin: 0;
+  padding: 0 20px;
 
   &--emphasized {
     color: @colorwhite;
+  }
+
+  @media (min-width: @tablet-width) {
+    line-height: 21px;
   }
 }
 
@@ -63,17 +140,63 @@
   color: @colorblack;
   background-color: @colorwhite;
   text-align: left;
+  padding: 34px 30px 15px 30px;
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+    display: flex;
+    padding: 60px 0 25px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 0 65px 0;
+  }
 }
 
 .advantage__list-explainer {
   .explain-text();
   line-height: 21px;
+  margin: 0 0 24px 0;
 }
 
 .advantage__list-item {
   padding: 0 0 0 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0 47px 0 47px;
+    text-align: center;
+  }
 }
 
 .advantage__list-header {
   .topic-middle();
+  position: relative;
+  margin: 0 0 15px 0;
+
+  @media (min-width: @tablet-width) {
+    .topic-middle21();
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: -5px;
+    width: 37px;
+    height: 37px;
+    background: url("../img/icon-burger.svg") center no-repeat;
+    background-size: contain;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      position: relative;
+      left: calc(50% - 38px);
+      width: 75px;
+      height: 75px;
+      margin-bottom: 20px;
+      background-image: url("../img/icon-burger.svg");
+    }
+  }
 }

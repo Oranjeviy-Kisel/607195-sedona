@@ -1,26 +1,61 @@
 .main-nav {
+  display: block;
   margin-bottom: -33px;
+  text-align: center;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    box-sizing: border-box;
+    margin: 0 auto 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    margin: 0 auto 0;
+  }
 }
 
 .main-nav__list {
   .list-reset();
-  display: flex;
-  flex-direction: column;
+  display: none;
+
+  &--noscript {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 20px 0;
+  }
 }
 
 .main-nav__list-item {
   margin-bottom: 0;
   text-align: center;
-  background-color: @colorlightblue;
-  box-shadow:
-    0 1px 0 0 rgba(255, 255, 255, 0.2) inset,
-    0 -1px 0 0 rgba(1, 1, 1, 0.2) inset;
 
-  &:last-child {
+  &:last-child .main-nav__list-link {
     box-shadow:
       0 1px 0 0 rgba(255, 255, 255, 0.2) inset,
-      0 -7px 7px -7px rgba(0, 0, 0, 1) inset;
+      0 -7px 7px -7px rgba(0, 0, 0, 0.5) inset;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: none;
+    width: 20%;
+
+    &:nth-child(2) {
+      margin-right: 20%;
+    }
+
+    &:last-child .main-nav__list-link {
+      box-shadow: none;
+    }
   }
 }
 
@@ -28,27 +63,87 @@
   display: block;
   .topic-middle();
   padding: 13px 0 17px;
-  color: #ffffff;
+  color: @colorwhite;
   text-decoration: none;
+  background-color: @colorlightblue;
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.2) inset,
+    0 -1px 0 0 rgba(1, 1, 1, 0.2) inset;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    .explain-text();
+    font-weight: bold;
+    color: @colorblack;
+    padding: 15px 0 15px;
+    background: none;
+    box-shadow: none;
+    background: none;
+  }
+
+  &:hover {
+    background-color: @colormediumblue;
+
+    @media (min-width: @tablet-width) {
+      background: none;
+      color: @colorlightblue;
+    }
+  }
+
+  &:active {
+    background-color: @colordarkblue;
+
+    @media (min-width: @tablet-width) {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &:not([href]) {
+    background-color: @colorlightblue;
+
+    @media (min-width: @tablet-width) {
+      background: none;
+      color: @colorbrown;
+    }
+  }
 }
 
 .main-nav__brand {
-  left: 51px;
+  width: 102px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .main-nav__switcher {
-  position: absolute;
+  display: block;
+  cursor: pointer;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 
   &--hamburger {
-    background: none;
-    border: none;
-    padding: 0;
-    right: 20px;
+    position: absolute;
+    right: 10px;
     bottom: 49px;
+    width: 27px;
+    height: 24px;
+    text-align: center;
+    background: none;
+    border: 2px solid transparent;
 
     &::before {
       content: "";
-      display: inline-block;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
       width: 23px;
       height: 20px;
       background-image: linear-gradient(#81b3d2 0, #81b3d2 4px, transparent 4px, transparent 8px, #81b3d2 8px, #81b3d2 12px, transparent 12px, transparent 16px, #81b3d2 16px, #81b3d2 20px);
@@ -56,19 +151,22 @@
   }
 
   &--closer {
-    top: 15px;
-    right: 34px;
-    width: 23px;
-    height: 23px;
-    background: transparent;
-    border: 0;
+    position: absolute;
+    top: 16px;
+    right: 19px;
+    width: 24px;
+    height: 24px;
+    background: none;
+    text-align: center;
+    border: 2px solid transparent;
+    outline: none;
 
     &::before {
       content: "";
       position: absolute;
-      top: 50%;
-      left: 50%;
       display: block;
+      top: 8px;
+      left: -4px;
       width: 28px;
       height: 4px;
       background-color: @colorwhite;
@@ -78,9 +176,9 @@
     &::after {
       content: "";
       position: absolute;
-      top: 50%;
-      left: 50%;
       display: block;
+      top: 8px;
+      left: -4px;
       width: 28px;
       height: 4px;
       background-color: @colorwhite;
