@@ -1,17 +1,31 @@
 .message {
-  background-color: #40E0D0;
-
-  &::before {
-    content: "Опишите свои эмоции:";
-    .group-name();
-  }
+  padding-bottom: 28px;
 
   @media (min-width: @tablet-width) {
-    text-align: left;
     width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
   }
 }
 
+.message__header {
+  .group-name();
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    display: flex;
+    margin-bottom: 5px;
+    width: 320px;
+    justify-content: center;
+    background-color: @colorwhite;
+
+    &::before {
+      .grey-line-horizontal();
+      margin-top: 10px;
+    }
+  }
+}
 
 .message__item {
   box-sizing: border-box;
@@ -21,6 +35,6 @@
   .topic-middle();
   text-transform: none;
   color: @colorblack;
-  padding: 20px;
+  padding: 15px 20px 14px;
   width: 100%;
 }

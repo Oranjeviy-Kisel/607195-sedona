@@ -1,6 +1,6 @@
 .page-header {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  text-align: center;
 }
 
 .page-header__logo {
@@ -26,12 +26,7 @@
   }
 }
 
-
 @media (min-width: @tablet-width) {
-  .page-header {
-    display: flex;
-  }
-
   .page-header__logo {
     &--full {
       height: 518px;
@@ -51,7 +46,6 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    display: flex;
     max-width: 1200px;
     background-color: @colorwhite;
     margin: 0 auto;

@@ -15,11 +15,21 @@
 .input-style() {
   box-sizing: border-box;
   background-color: @colorF2grey;
-  padding: 0 20px 0 20px;
+  padding: 0 10px 0 24px;
   height: 58px;
   border: 1px solid red;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
+}
+
+.grey-line-horizontal() {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  background-color: @colorDBgrey;
+  z-index: -1;
 }
