@@ -6,6 +6,22 @@ body {
   text-align: center;
 }
 
+.body-wrapper {
+  margin: 0 auto 0;
+  min-width: 320px;
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    margin: 0 auto 0;
+    background-color: white;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -24,7 +40,7 @@ img {
 
 .button-filled {
   padding: 0;
-  display: inline-block;
+  display: block;
   height: 58px;
   color: @colorwhite;
   .topic-middle();

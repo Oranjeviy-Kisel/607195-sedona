@@ -1,9 +1,9 @@
 .reply {
   box-sizing: border-box;
   display: block;
-  width: 320px;
   padding: 0;
   margin: 0 auto;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: auto;
@@ -13,38 +13,54 @@
     padding: 0 60px;
     justify-content: space-between;
     margin-top: 6px;
+    margin-bottom: 98px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 120px;
+    margin-bottom: 65px;
   }
 }
 
 .reply__group {
   box-sizing: border-box;
   display: block;
-  width: 100%;
-  margin: 0;
+  width: 280px;
+  margin: 0 auto 0;
   border: 0;
-  padding: 4px 20px 6px;
-  box-shadow:
-    0 1px 0 0 @colorE5grey,
-    0 1px 0 0 @colorE5grey inset;
+  padding: 0;
+  /*   box-shadow:
+  0 1px 0 0 @colorE5grey,
+  0 1px 0 0 @colorE5grey inset; */
+
+  &::before {
+    .grey-line-horizontal();
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    box-shadow: none;
+    /* box-shadow: none; */
     padding: 4px 0 6px;
     width: 50%;
   }
 }
 
 .reply__submitter {
-  margin-top: 20px;
-  width: 280px;
+  margin: 22px auto 38px;
+  min-width: 280px;
 
   @media (min-width: @tablet-width) {
-    flex-basis: 50%;
+    width: 50%;
     align-self: baseline;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+    margin: 0;
   }
 }
 
@@ -54,5 +70,6 @@
   @media (min-width: @tablet-width) {
     display: block;
     align-self: baseline;
+    .explain-text();
   }
 }
