@@ -78,19 +78,45 @@
   .input-style();
   width: 100%;
   padding-right: 68px;
-  padding-left: 20px;
+  padding-left: 18px;
   margin-bottom: 14px;
+  border-right: none;
   background-size: 16px 16px, 58px 58px;
   background-image: url("../img/icon-mail.svg"), linear-gradient(to left, @colorE6grey 0, @colorE6grey 100%);
   background-position: calc(100% - 19px) center, right center;
   background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    border-right: none;
+  }
+
+  &::-webkit-input-placeholder {
+    opacity: 1;
+    color: @colorblack;
+  }
+
+  &:-moz-placeholder {
+    opacity: 1;
+    color: @colorblack;
+  }
+
+  &::-moz-placeholder {
+    opacity: 1;
+    color: @colorblack;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: 1;
+    color: @colorblack;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 28px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 316px;
+    width: 320px;
     margin-left: 15px;
   }
 }
