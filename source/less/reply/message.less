@@ -4,8 +4,12 @@
   @media (min-width: @tablet-width) {
     width: 100%;
     position: relative;
-    margin: 0;
+    margin-bottom: 60px;
     padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 59px;
   }
 }
 
@@ -14,16 +18,18 @@
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
-    display: flex;
-    margin-bottom: 5px;
     width: 320px;
-    justify-content: center;
+    margin-bottom: 38px;
     background-color: @colorwhite;
 
     &::before {
-      .grey-line-horizontal();
-      margin-top: 10px;
-      z-index: -1;
+      .grey-line-left();
+      margin-top: 16px;
+    }
+
+    &::after {
+      .grey-line-right();
+      margin-top: 16px;
     }
   }
 }
@@ -38,4 +44,8 @@
   color: @colorblack;
   padding: 15px 20px 14px;
   width: 100%;
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 20px 14px;
+  }
 }

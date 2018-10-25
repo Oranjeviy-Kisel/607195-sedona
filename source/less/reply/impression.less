@@ -1,10 +1,21 @@
 .impression {
   padding-bottom: 1px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     order: -1;
     text-align: left;
     padding-left: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 295px;
+      background-color: @colorDBgrey;
+      top: 26px;
+      right: 0;
+    }
   }
 }
 
@@ -15,6 +26,12 @@
   @media (min-width: @tablet-width) {
     text-align: left;
     margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    margin-bottom: 52px;
+    padding-left: 79px;
   }
 }
 
@@ -37,11 +54,20 @@
     left: 0;
     background-color: @color33grey;
     box-shadow: 0 0 0 28px @colorF2grey inset;
+
+    @media (min-width: @desktop-width) {
+      top: -13px;
+      left: 3px;
+    }
   }
 
   @media (min-width: @tablet-width) {
     padding-left: 76px;
-    margin-bottom: 50px;
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 79px;
   }
 }
 

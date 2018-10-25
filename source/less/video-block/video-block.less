@@ -1,18 +1,18 @@
 .video-block {
   text-align: center;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    margin-top: 50px;
-    padding-top: 50px;
+    padding: 65px 0 75px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 68px 0 83px 0;
   }
 }
 
 .video-block__header {
   .topic-middle();
-  margin: 25px 0 0 0;
+  margin: 32px 0 0 0;
 
   @media (min-width: @tablet-width) {
     .topic-middle30();
@@ -23,10 +23,17 @@
 
 .video-block__info {
   .explain-text();
-  margin: 28px 0 0 0;
-  padding: 0 24px;
+  box-sizing: border-box;
+  width: 320px;
+  margin: 28px auto 0;
+  padding: 0 30px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 50px;
+    width: 648px;
+    padding: 0 105px 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 5px 105px 70px;
   }
 }

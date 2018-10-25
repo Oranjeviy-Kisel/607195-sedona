@@ -9,9 +9,11 @@
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
+  color: @colorblack;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 75px;
+  text-decoration: none;
+  margin-top: 36px;
 }
 
 .page-footer__copyright {
@@ -31,7 +33,7 @@
   .page-footer {
     flex-direction: row;
     justify-content: center;
-    padding: 38px 60px 40px;
+    padding: 0 60px 40px;
   }
 
   .page-footer__header {
@@ -45,10 +47,7 @@
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    width: 1200px;
-    background-color: @colorwhite;
     margin: 0 auto;
     padding: 36px 120px 50px;
-    .desktop-shadow();
   }
 }

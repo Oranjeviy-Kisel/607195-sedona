@@ -1,10 +1,44 @@
 .page-header {
   display: block;
   text-align: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 26px;
+    bottom: 0;
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      width: 768px;
+      height: 57px;
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @colorwhite;
+    margin: 0 auto;
+
+    &::after {
+      width: 1200px;
+      height: 57px;
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+    }
+  }
 }
 
 .page-header__logo {
-  display: block;
+  margin: 0;
+  padding: 0;
   width: 100%;
   text-align: center;
   background: #73b1e5 no-repeat 50% 0;
@@ -23,6 +57,7 @@
     background-image: url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
     background-size: 280px 213px, 768px 389px;
     background-position: center 90px, center bottom;
+    margin-bottom: 3px;
   }
 }
 
@@ -33,6 +68,7 @@
       background-image: url("../img/text-sedona-index.svg"), url("../img/bg-back-tablet@1x.jpg");
       background-size: 460px 350px, 768px 518px;
       background-position: center 77px, center bottom;
+      margin-bottom: 0;
     }
 
     &--simple {
@@ -45,13 +81,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-header {
-    max-width: 1200px;
-    background-color: @colorwhite;
-    margin: 0 auto;
-    .desktop-shadow();
-  }
-
   .page-header__logo {
     &--full {
       height: 518px;
