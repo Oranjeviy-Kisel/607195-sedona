@@ -17,29 +17,31 @@
   margin: 0;
 }
 
+.social__icon {
+  margin-top: 14px;
+  width: 19px;
+  height: 19px;
+  opacity: 1;
+  fill: #ffffff;
+}
+
 .social__lynk {
   display: block;
   color: white;
   width: 46px;
   height: 48px;
-
-  &--tw {
-    background: url("../img/icon-twitter.svg") center no-repeat;
-    background-size: 19px auto;
-  }
-
-  &--youtube {
-    background: url("../img/icon-youtube.svg") center no-repeat;
-    background-size: 19px auto;
-  }
-
-  &--fb {
-    background: url("../img/icon-facebook.svg") center no-repeat;
-    background-size: auto 19px;
-  }
+  text-align: center;
 
   &:hover,
   &:focus {
     background-color: @colormediumblue;
+  }
+
+  &:active {
+    background-color: @colordarkblue;
+  }
+
+  &:active .social__icon {
+    opacity: 0.3;
   }
 }
