@@ -3,6 +3,17 @@
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 60px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    padding: 33px 120px 50px;
+  }
 }
 
 .page-footer__header {
@@ -13,7 +24,7 @@
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  margin-top: 36px;
+  margin-top: 34px;
 }
 
 .page-footer__copyright {
@@ -23,31 +34,27 @@
   margin: 28px 0 20px 0;
 }
 
-.page-footer__copyright svg {
+.page-footer__academy-logo {
   position: relative;
-  margin-left: 10px;
-  top: 13px;
+  top: 14px;
+  right: 0;
+  margin-left: 9px;
+}
+
+.page-footer__copyright:hover .page-footer__academy-logo {
+  color: @colorlightblue;
+}
+
+.page-footer__copyright:active .page-footer__academy-logo {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer {
-    flex-direction: row;
-    justify-content: center;
-    padding: 0 60px 40px;
-  }
-
   .page-footer__header {
     margin: 9px -8px 0 0;
   }
 
   .page-footer__copyright {
     margin: -7px 0 0 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-footer {
-    margin: 0 auto;
-    padding: 36px 120px 50px;
   }
 }
