@@ -109,16 +109,23 @@
 
     @media (min-width: @tablet-width) {
       background: none;
-      color: rgba(0, 0, 0, 0.3);
+      color: @colorblack;
+      opacity: 0.3;
     }
   }
 
-  &:not([href]) {
-    background-color: @colorlightblue;
-
+  &--current {
     @media (min-width: @tablet-width) {
-      background: none;
       color: @colorbrown;
+
+      &:hover {
+        color: @colordarkbrown;
+      }
+
+      &:active {
+        color: @colorbrown;
+        opacity: 0.3;
+      }
     }
   }
 }
