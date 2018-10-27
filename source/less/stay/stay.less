@@ -64,3 +64,43 @@
     margin: 48px auto 65px;
   }
 }
+
+.stay__map {
+  position: relative;
+  width: 320px;
+  height: 350px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+}
+
+.stay__map iframe {
+  position: relative;
+  z-index: 2;
+  border: none;
+}
+
+.stay__img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-14px) translateY(-14px);
+    background-image: url("../img/icon-map-marker.svg");
+  }
+}
