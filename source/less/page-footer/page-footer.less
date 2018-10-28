@@ -1,22 +1,22 @@
 .page-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   box-sizing: border-box;
+  padding: 37px 0 40px;
 
   @media (min-width: @tablet-width) {
-    flex-direction: row;
-    justify-content: center;
-    padding: 0 60px 40px;
+    width: 648px;
+    display: flex;
+    padding: 0 0 40px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 auto;
-    padding: 33px 120px 50px;
+    width: 960px;
+    padding: 33px 0 50px;
   }
 }
 
 .page-footer__header {
+  display: block;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
@@ -28,10 +28,15 @@
 }
 
 .page-footer__copyright {
+  display: block;
   .explain-text();
   text-decoration: none;
   color: @colorblack;
   margin: 28px 0 20px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 28px 0 20px 0;
+  }
 }
 
 .page-footer__academy-logo {

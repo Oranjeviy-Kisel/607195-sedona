@@ -2,11 +2,11 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 31px;
+    margin-bottom: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 1px;
+    margin-bottom: 4px;
   }
 }
 
@@ -67,8 +67,9 @@
 
 .stay__map {
   position: relative;
-  width: 320px;
+  min-width: 320px;
   height: 350px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -87,10 +88,13 @@
 
 .stay__img-wrapper {
   position: absolute;
+  width: 100%;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
   margin: 0;
+  overflow: hidden;
 
   &::before {
     content: "";
