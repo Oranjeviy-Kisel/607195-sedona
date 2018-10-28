@@ -39,19 +39,20 @@
 .seen__wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    width: 470px;
+    width: 648px;
     padding: 0;
     margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
+    justify-content: space-between;
   }
 }
 
 .seen__label {
+  box-sizing: border-box;
   position: relative;
   display: block;
   padding: 12px 0 32px 80px;
@@ -72,16 +73,27 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 125px;
+    width: 230px;
     padding-bottom: 40px;
     padding-left: 79px;
-    margin-left: 5px;
+    margin-right: auto;
+
+    &:nth-of-type(2n-1) {
+      margin-right: 30px;
+      margin-left: 95px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: auto;
     margin-left: 0;
+    margin-right: 0;
     padding-left: 80px;
+
+    &:nth-of-type(2n-1) {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 }
 
