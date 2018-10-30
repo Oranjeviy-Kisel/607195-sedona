@@ -1,0 +1,49 @@
+.failure {
+  width: 320px;
+  bottom: 438px;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+    bottom: 161px;
+    padding: 0 60px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 45px;
+  }
+}
+
+.failure__header {
+  .topic-middle();
+  margin: 0;
+  padding: 38px 15px 28px;
+
+  @media (min-width: @tablet-width) {
+    .topic-middle30();
+    line-height: 40px;
+    margin: 0 0 25px;
+    padding: 55px 15px 0;
+  }
+}
+
+.failure__info {
+  .explain-text();
+  padding: 0 45px 10px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.failure__close {
+  width: 180px;
+  margin: 13px auto 35px;
+  .topic-middle();
+
+  @media (min-width: @tablet-width) {
+    .topic-middle21();
+    margin: 33px auto 49px;
+    width: 272px;
+  }
+}

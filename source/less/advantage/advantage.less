@@ -117,7 +117,7 @@
   }
 }
 
-.advantage__picture img {
+.advantage__image {
   display: block;
   margin: 0 auto;
 
@@ -132,6 +132,13 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+  }
+
+  &--bridge {
+    @media (min-width: @desktop-width) {
+      top: 50%;
+      transform: translateY(-204px);
+    }
   }
 }
 

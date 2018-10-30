@@ -5,6 +5,8 @@
     <title>Оставить отзыв</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
     <script>
       document.createElement( "picture" );
@@ -19,24 +21,24 @@
       <header class="page-header">
         <nav class="main-nav">
           <ul class="main-nav__list main-nav__list--noscript">
-            <li class="main-nav__list-item">
-              <a class="main-nav__list-link" href="index.html">Главная</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
-            <li class="main-nav__list-item">
-              <a class="main-nav__list-link" href="photo.html">Фото и видео</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="photo.html">Фото и видео</a>
             </li>
-            <li class="main-nav__list-item">
-              <a class="main-nav__list-link main-nav__list-link--current">Форма отзыва</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current">Форма отзыва</a>
             </li>
-            <li class="main-nav__list-item">
-              <a class="main-nav__list-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
           <a class="main-nav__brand" href="index.html">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-              <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona">
+              <img class="main-nav__logo" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona">
             </picture>
           </a>
           <button class="main-nav__switcher main-nav__switcher--hamburger">
@@ -54,7 +56,7 @@
             Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
           </p>
         </section>
-        <form class="reply" action="https://echo.htmlacademy.ru" method="post">
+        <form class="reply" action="https://echo.htmlacademy.ru" method="post" target="blank">
           <fieldset class="reply__group introduce">
             <h3 class="introduce__header">Представьтесь:</h3>
             <div class="introduce__block">
@@ -70,7 +72,7 @@
             <div class="introduce__block">
               <label class="introduce__label" for="userpatronymic">Отчество:
               </label>
-              <input class="introduce__input" type="text" name="userpatronymic" id="userpatronymic" placeholder="Александрович" pattern="^[a-zA-ZА-Яа-яЁё\s]+$">
+              <input class="introduce__input" type="text" name="userpatronymic" id="userpatronymic" placeholder="Александрович">
             </div>
           </fieldset>
           <fieldset class="reply__group contacts">
@@ -81,7 +83,7 @@
               </label>
               <input class="contacts__field contacts__field--phone" type="tel" name="userphone" id="userphone" placeholder="Введите телефон" pattern="[0-9]{11}" required>
               <label class="contacts__label" for="usermail">Электронная почта*:</label>
-              <input class="contacts__field" type="text" name="usermail" id="usermail" placeholder="Введите e-mail" pattern="^[а-яЁёa-z0-9._%+-]+@[а-яЁёa-z0-9.-]+\.[a-zа-яё]{2,4}$" required>
+              <input class="contacts__field" type="email" name="usermail" id="usermail" placeholder="Введите e-mail" pattern="^[а-яЁёa-z0-9._%+-]+@[а-яЁёa-z0-9.-]+\.[a-zа-яё]{2,4}$" required>
             </div>
           </fieldset>
           <fieldset class="reply__group impression">
@@ -113,7 +115,27 @@
           </fieldset>
           <button class="reply__submitter button-filled" type="submit">Отправить отзыв</button>
           <p class="reply__footnote">* – Обязательные поля</p>
+
+          <section class="reply__popups">
+            <div class="reply__modal failure">
+              <h2 class="failure__header">Что-то пошло не так!</h2>
+              <p class="failure__info">
+                Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+              </p>
+              <button class="failure__close button-filled">ОК</button>
+            </div>
+            <div class="reply__modal success">
+              <h2 class="success__header">Ваш отзыв отправлен!</h2>
+              <p class="success__info">
+                Спасибо за ваше участие, ваш отзыв уже поступил к нам.<span class="success__br"></span> В ближайшее время мы опубликуем его на сайте.
+              </p>
+              <div class="success__button-wrapper">
+                <button class="success__close button-filled">Закрыть окно</button>
+              </div>
+            </div>
+          </section>
         </form>
+
       </main>
       <footer class="page-footer">
         <a class="page-footer__header" href="#">#Visitsedona</a>
@@ -152,5 +174,6 @@
       </footer>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/popup.js"></script>
   </body>
 </html>

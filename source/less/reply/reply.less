@@ -45,7 +45,7 @@
 }
 
 .reply__submitter {
-  margin: 22px auto 38px;
+  margin: 22px auto 35px;
   min-width: 280px;
 
   @media (min-width: @tablet-width) {
@@ -67,5 +67,20 @@
     display: block;
     align-self: baseline;
     .explain-text();
+    margin-left: auto;
+  }
+}
+
+.reply__modal {
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  background-color: @colorwhite;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+  left: 50%;
+  transform: translateX(-50%);
+
+  &--visible {
+    display: block;
   }
 }
