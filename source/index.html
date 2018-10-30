@@ -5,6 +5,8 @@
     <title>Седона</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
     <script>
       document.createElement( "picture" );
@@ -19,24 +21,24 @@
       <header class="page-header">
         <nav class="main-nav">
           <ul class="main-nav__list main-nav__list--noscript">
-            <li class="main-nav__list-item">
-              <a class="main-nav__list-link main-nav__list-link--current">Главная</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
             </li>
-            <li class="main-nav__list-item">
-              <a class="main-nav__list-link" href="photo.html">Фото и видео</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="photo.html">Фото и видео</a>
             </li>
-            <li class="main-nav__list-item">
-              <a class="main-nav__list-link" href="form.html">Форма отзыва</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Форма отзыва</a>
             </li>
-            <li class="main-nav__list-item">
-              <a class="main-nav__list-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
-          <a class="main-nav__brand" href="index.html">
+          <a class="main-nav__brand">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-              <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="City of Sedona">
+              <img class="main-nav__logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="City of Sedona">
             </picture>
           </a>
           <button class="main-nav__switcher main-nav__switcher--hamburger">
@@ -65,7 +67,7 @@
                 <source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
-                <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Городок Седона">
+                <img class="advantage__image" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Городок Седона">
               </picture>
             </div>
             <ul class="advantage__list">
@@ -110,7 +112,7 @@
                 <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
-                <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Мост Дьявола">
+                <img class="advantage__image advantage__image--bridge" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Мост Дьявола">
               </picture>
             </div>
           </li>
@@ -134,7 +136,7 @@
         <section class="stay">
           <h2 class="stay__header">Заинтересовались?</h2>
           <p class="stay__info">Укажите предполагаемые даты поездки,<span class="stay__br"></span> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button class="stay__button button-filled">Найти гостиницу</button>
+          <a class="stay__button button-filled" href="#">Найти гостиницу</a>
           <div class="stay__map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470043.6016537899!2d-111.96100541294062!3d34.916311644028745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1540646252512" width="320" height="350" allowfullscreen>
             </iframe>

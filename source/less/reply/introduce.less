@@ -29,9 +29,17 @@
 }
 
 .introduce__label {
-  margin-right: 12px;
+  margin-right: 16px;
   flex-grow: 0;
   .explain-text();
+
+  @media (min-width: @tablet-width) {
+    margin-right: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 16px;
+  }
 }
 
 .introduce__input {
