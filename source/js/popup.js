@@ -6,7 +6,7 @@ var success__close = success.querySelector(".success__close");
 
 submitter.addEventListener("click", function (evt) {
   /*evt.preventDefault();*/
-  var key = document.querySelectorAll(`input[required]`);
+  var key = document.querySelectorAll("input[required]");
   var j=0;
   for(var i = 0; i < key.length; i++){
     /*console.log(key[i].validity.patternMismatch +"," + key[i].validity.typeMismatch);*/
